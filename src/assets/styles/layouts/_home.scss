@@ -24,14 +24,13 @@ body {
 
 .img-croscat {
   margin: 0;
+  margin-bottom: 0.8rem;
   font-size: 0.8rem;
   font-style: italic;
 }
 
 img {
   max-width: 100%;
-  object-fit: scale-down;
-  overflow: auto;
 }
 
 a {
@@ -51,6 +50,59 @@ a {
   text-decoration: none;
   cursor: help;
 }
+
+
+.info-itinerari {
+  float: left;
+  width: 15vw;
+  padding: 0.8rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  margin-right: 1rem;
+  line-height: 1;
+  color: $bg;
+  background-color: $secondary-color;
+  border-radius: 5px;
+  outline: 3px dotted $bg;
+  outline-offset: -10px;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid $bg;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+
+  p {
+    margin: 5px auto;
+
+    .special-link {
+      color: $special-link-color;
+      text-decoration: none;
+      
+      &:visited{
+        color: $special-visited-color;
+      }
+    
+      &:active, &:hover{
+        color: $special-hover-color;
+      }
+    }
+  }
+
+  .info-title {
+    font-weight: bold;
+  }
+}
+
 
 figcaption,
 footer {

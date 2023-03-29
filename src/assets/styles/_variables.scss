@@ -13,6 +13,11 @@ $link-color: #ba4646;
 $hover-color: lighten($link-color, 20%);
 $visited-color: darken($link-color, 10%);
 
+//special link color variables
+$special-link-color: darken($bg, 15%);
+$special-hover-color: lighten($special-link-color, 10%);
+$special-visited-color: darken($special-link-color, 10%);
+
 $tablet-min-width: 465px;
 $pc-min-width: 960px;
 
