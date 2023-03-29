@@ -53,8 +53,6 @@ a {
 
 
 .info-itinerari {
-  float: left;
-  width: 15vw;
   padding: 0.8rem;
   padding-left: 1.8rem;
   padding-right: 1.8rem;
@@ -124,6 +122,11 @@ footer {
   img {
     max-width: $global-width;
   }
+
+  .info-itinerari {
+    float: left;
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: $pc-min-width) {
@@ -134,5 +137,10 @@ footer {
 
   img {
     max-width: $global-width * 0.7;
+  }
+
+  .info-itinerari {
+    float: left;
+    width: 300px;
   }
 }
