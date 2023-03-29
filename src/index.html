@@ -1,27 +1,144 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="author" content="Oriol Esquena" />
+        <meta
+            name="description"
+            content="Lloc web creat com a exercici de la PAC1 de l'assignatura
+        Eines HTML i CSS II del màster Desenvolupament de Llocs i Aplicacions Web de la UOC. 
+        S'hi troba informació sobre el Volcà Croscat, un lloc d'interès de la localitat d'Olot (La Garrotxa)."
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+        </style>
+        <title>El volcà Croscat</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>El volcà Croscat <span class="fa-solid fa-volcano"></span></h1>
+        </header>
+        <main class="main">
+            <article class="intro">
+                <header>
+                    <h2>
+                        <span class="fa-regular fa-file-lines"></span>
+                        Informació general
+                    </h2>
+                </header>
+                <section>
+                    <p>
+                        El Croscat és un volcà de tipus estrombolià que es troba
+                        entre el municipi de Santa Pau i el d'Olot, a la comarca
+                        de la Garrotxa. Forma part del parc natural de la Zona
+                        Volcànica de la Garrotxa.
+                    </p>
+                </section>
+                <figure class="img-croscat">
+                    <img
+                        src="https://es.turismegarrotxa.com/img-apartat-3200-1800/croscat-1_001.jpg"
+                        alt="Volcà Croscat"
+                    />
+                    <figcaption>
+                        Imatge del volcà Croscat des de l'aire | Imatge de:
+                        <a
+                            href="https://ca.turismegarrotxa.com/27-indrets-d-interes-de-la-garrotxa/reserva-natural-del-volca-del-croscat/"
+                            title="Reserva Natural del Volcà del Croscat"
+                            target="_blank"
+                            >Turisme Garrotxa</a
+                        >
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="history">
+                <header>
+                    <h2>
+                        <span class="fa-solid fa-clock-rotate-left"></span>
+                        Història i formació
+                    </h2>
+                </header>
+                <section>
+                    <p>
+                        El Croscat és el volcà més jove de la zona volcànica de
+                        la Garrotxa i de tota la península ibèrica. Va tenir
+                        dues erupcions, la primera i més gran fa 17.000 anys, i
+                        la segona fa 11.500 anys. L'emissió de laves fluïdes i
+                        una sèrie d'explosions de violència moderada van donar
+                        lloc a un cràter en forma de ferradura d'uns 160m
+                        d'alçada i un màxim de 600m de llarg per 350m d'amplada.
+                        A la zona més alta del cràter s'hi troben les restes
+                        d'una antiga torre de defensa, que ara s'ha reconvertit
+                        en una torre de comunicacions.
+                    </p>
+                    <p>
+                        La colada de lava té una extensió de 20 km². A sobre de
+                        la qual s'hi troba la famosa
+                        <a
+                            href="https://ca.wikipedia.org/wiki/Fageda_d'en_Jord%C3%A0"
+                            title="La Fageda d'en Jordà (Viqupèdia)"
+                            target="_blank"
+                            >Fageda d'en Jordà</a
+                        >.
+                    </p>
+                </section>
+            </article>
+            <article class="controversy">
+                <header>
+                    <h2>
+                        <span class="fa-solid fa-file-shield"></span>
+                        Explotació i creació del
+                        <abbr
+                            class="pnzvg"
+                            title="Parc Natural de la Zona Volcànica de la Garrotxa"
+                            >PNZVG</abbr
+                        >
+                    </h2>
+                </header>
+                <section>
+                    <p>
+                        Durant 25 anys va estar dedicat a l'explotació de
+                        gredes, per a la producció de maons i pistes de tennis.
+                        Les extraccions del Croscat van ser la principal causa
+                        de les mobilitzacions populars que van fer que el
+                        Parlament de Catalunya, el 1982, aprovés la creació del
+                        <strong
+                            >Parc Natural de la Zona Volcànica de la
+                            Garrotxa</strong
+                        >
+                        (PNZVG). Tot i això, fins al 1991 no es van poder aturar
+                        les extraccions, quan la Generalitat de Catalunya va
+                        comprar l'empresa explotadora. Posteriorment, la mateixa
+                        Generalitat va expropiar els terrenys de la Reserva
+                        Natural i va procedir a restaurar-los.
+                    </p>
+                    <p>
+                        L'extracció de gredes o lapil·li va donar lloc a un
+                        impressionant tall a la part posterior del cràter, la
+                        més alta, de més de 100m d'alçada i 500m de longitud,
+                        que s'ha convertit en una atracció turística. Les capes
+                        més fosques són les originals de la lava, però degut a
+                        l'oxidació, s'han format una sèrie de capes de colors
+                        vermellosos i ataronjats molt vistosos.
+                    </p>
+                </section>
+            </article>
+        </main>
+        <include src="./views/footer.html"></include>
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+    </body>
 </html>
