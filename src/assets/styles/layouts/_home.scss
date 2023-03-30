@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 225px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,17 +13,41 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $bg;
+  background-color: $secondary-color-light;
   color: $primary-color;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: $secondary-color-light;
+  background-color: $secondary-color;
+  width: 100vw;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  width: $global-width * 1.25;
+  margin: 16px auto;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .img-croscat {
@@ -46,6 +74,19 @@ a {
   }
 }
 
+.special-link {
+  color: $special-link-color;
+  text-decoration: none;
+  
+  &:visited{
+    color: $special-visited-color;
+  }
+
+  &:active, &:hover{
+    color: $special-hover-color;
+  }
+}
+
 .pnzvg {
   text-decoration: none;
   cursor: help;
@@ -58,10 +99,10 @@ a {
   padding-right: 1.8rem;
   margin-right: 1rem;
   line-height: 1;
-  color: $bg;
+  color: $secondary-color-light;
   background-color: $secondary-color;
   border-radius: 5px;
-  outline: 3px dotted $bg;
+  outline: 3px dotted $secondary-color-light;
   outline-offset: -10px;
 
   ul {
@@ -72,7 +113,7 @@ a {
   li {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    border-bottom: 1px solid $bg;
+    border-bottom: 1px solid $secondary-color-light;
 
     &:last-of-type {
       border-bottom: 0;
@@ -81,19 +122,6 @@ a {
 
   p {
     margin: 5px auto;
-
-    .special-link {
-      color: $special-link-color;
-      text-decoration: none;
-      
-      &:visited{
-        color: $special-visited-color;
-      }
-    
-      &:active, &:hover{
-        color: $special-hover-color;
-      }
-    }
   }
 
   .info-title {
@@ -111,12 +139,45 @@ footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: $secondary-color-light;
+  background-color: $secondary-color;
+  width: 100vw;
+
+  .font {
+    margin: 0 auto;
+    width: $global-width*1.25;
+  }
+}
+
+@media screen and (max-width: $small-width-smartphones) {
+  .header__title {
+    font-size: 1.4rem;
+  }
+
 }
 
 @media screen and (min-width: $tablet-min-width) {
+  html {
+    scroll-padding-top: 170px;
+  }
+
   body {
     width: $global-width;
     text-align: left;
+  }
+
+  .index {
+    flex-flow: row wrap;
+    width: $global-width;
+
+    li:not(:last-child):after { /* afegim un punt entre els elements de la llista de l'índex de navegació */
+      content: " ·\00a0";
+      color: $secondary-color-light;
+      height: 40px;
+      margin: auto;
+    }
   }
 
   img {
@@ -125,22 +186,35 @@ footer {
 
   .info-itinerari {
     float: left;
-    width: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    width: calc(80% - 200px);
+  }
+
+  .footer {
+  
+    .font {
+      margin: 0 auto;
+      width: $global-width;
+    }
   }
 }
 
 @media screen and (min-width: $pc-min-width) {
+  html {
+    scroll-padding-top: 150px;
+  }
+
   body {
-    width: $global-width * 0.7;
+    width: $global-width * 0.8;
     text-align: left;
   }
 
   img {
-    max-width: $global-width * 0.7;
+    max-width: $global-width * 0.8;
   }
 
   .info-itinerari {
     float: left;
-    width: 300px;
   }
 }

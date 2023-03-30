@@ -6,19 +6,20 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 //main color variables
 $primary-color: #351702b4;
 $secondary-color: #6c7840;
-$bg: color.scale($secondary-color, $lightness: 90%);
+$secondary-color-light: color.scale($secondary-color, $lightness: 90%);
 
 //link color variables
-$link-color: #ba4646;
-$hover-color: lighten($link-color, 20%);
-$visited-color: darken($link-color, 10%);
+$link-color: color.scale($secondary-color, $saturation: 80%);
+$hover-color: color.scale($link-color, $lightness: 20%, $saturation: -30%);
+$visited-color: color.scale($link-color, $lightness: -10%);
 
 //special link color variables
-$special-link-color: darken($bg, 15%);
-$special-hover-color: lighten($special-link-color, 10%);
-$special-visited-color: darken($special-link-color, 10%);
+$special-link-color: $secondary-color-light;
+$special-hover-color: darken($special-link-color, 20%);
+$special-visited-color: $secondary-color-light;
 
-$tablet-min-width: 465px;
-$pc-min-width: 960px;
+$small-width-smartphones: 350px;
+$tablet-min-width: 560px;
+$pc-min-width: 1200px;
 
 $global-width: 60vw;
