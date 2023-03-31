@@ -25,30 +25,28 @@
   cursor: help;
 }
 
-.text-link {
-  color: $link-color;
-  text-decoration: none;
-  
-  &:visited {
-    color: $visited-color;
-  }
-
-  &:active, &:hover {
-    color: $hover-color;
+@mixin links ($link, $visited, $hover, $active) {
+  & {
+      text-decoration: none;
+      color: $link;
+      &:visited {
+          color: $visited;
+      }
+      &:hover {
+          color: $hover;
+      }
+      &:active, &:focus {
+          color: $active;
+      }
   }
 }
 
-.colored-background-link {
-  color: $special-link-color;
-  text-decoration: none;
-  
-  &:visited {
-    color: $special-visited-color;
-  }
+.text-link {
+  @include links($link-color, $visited-color, $hover-color, $hover-color);
+}
 
-  &:active, &:hover {
-    color: $special-hover-color;
-  }
+.colored-background-link {
+  @include links($colored-bg-link-color, $colored-bg-visited-color, $colored-bg-hover-color, $colored-bg-hover-color);
 }
 
 .special-section__summary {

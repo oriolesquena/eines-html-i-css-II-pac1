@@ -13,14 +13,16 @@ $link-color: color.scale($secondary-color, $saturation: 80%);
 $hover-color: color.scale($link-color, $lightness: 20%, $saturation: -30%);
 $visited-color: color.scale($link-color, $lightness: -10%);
 
-//special link color variables
-$special-link-color: $secondary-color-light;
-$special-hover-color: darken($special-link-color, 20%);
-$special-visited-color: $secondary-color-light;
+//colored background link color variables
+$colored-bg-link-color: $secondary-color-light;
+$colored-bg-hover-color: darken($colored-bg-link-color, 20%);
+$colored-bg-visited-color: $secondary-color-light;
 
+//different devices screen width
 $small-width-smartphones: 350px;
 $tablet-min-width: 560px;
 $pc-min-width: 1200px;
 
+//global page width
 $global-width: 60vw;
-$max-width: 900px;
+$max-width: 850px;

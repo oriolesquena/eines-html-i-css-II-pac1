@@ -54,7 +54,7 @@ body {
 .main {
   @extend %display-style;
   justify-content: flex-start;
-  max-width: 850px;
+  max-width: $max-width;
 }
 
 .footer {
