@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 225px;
+}
+  
+%display-style {
+  display: flex;
+  flex-direction: column;
+}
+
+%header-and-footer-style {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: $secondary-color-light;
+  background-color: $secondary-color;
+  width: 100vw;
+  text-align: center;
+}
+
+body {
+  @extend %display-style;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $secondary-color-light;
+  color: $primary-color;
+}
+
+.primary-header {
+  @extend %header-and-footer-style;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid $secondary-color-light;
+  box-shadow: 0 2px 2px 1px $secondary-color-light;
+  z-index: 5;
+}
+
+.primary-nav {
+  @extend %display-style;
+  justify-content: center;
+  width: $global-width * 1.25;
+  margin: 1rem auto;
+}
+
+.main {
+  @extend %display-style;
+  justify-content: flex-start;
+  max-width: 850px;
+}
+
+.footer {
+  @extend %header-and-footer-style;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.footer__font {
+  margin: 0 auto;
+  width: $global-width * 1.4;
+}
+
+@media screen and (max-width: $small-width-smartphones) {
+  .primary-header__title {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (min-width: $tablet-min-width) {
+  html {
+    scroll-padding-top: 170px;
+  }
+
+  body {
+    width: $global-width;
+    text-align: left;
+  }
+
+  .primary-nav {
+    flex-flow: row wrap;
+    width: $global-width;
+
+    // afegim un punt entre els elements de la llista de l'índex de navegació
+    > li:not(:last-child):after {
+      content: " ·\00a0";
+    }
+  }
+
+  .footer__font {
+    width: calc($global-width * 1.25 - 10%);
+  }
+}
+
+@media screen and (min-width: $pc-min-width) {
+  html {
+    scroll-padding-top: 150px;
+  }
+
+  body {
+    width: $global-width * 0.8;
+  }
+
+  .footer__font {
+    max-width: $max-width;
+  }
+}

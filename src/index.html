@@ -35,37 +35,39 @@
         <title>El volcà Croscat</title>
     </head>
     <body>
-        <header class="header">
-            <h1 class="header__title">
-                <a class="special-link" href="index.html#top"
+        <header class="primary-header">
+            <h1 class="primary-header__title">
+                <a class="colored-background-link" href="index.html#top"
                     >El volcà Croscat <span class="fa-solid fa-volcano"></span
                 ></a>
             </h1>
             <nav>
-                <ul class="index">
+                <ul class="primary-nav list--no-style">
                     <li>
                         <a
-                            class="special-link"
+                            class="colored-background-link"
                             href="index.html#historia-i-formacio"
                             >Història i formació</a
                         >
                     </li>
                     <li>
                         <a
-                            class="special-link"
+                            class="colored-background-link"
                             href="index.html#explotacio-i-creacio-pnzvg"
                             >Explotació i creació del PNZVG</a
                         >
                     </li>
                     <li>
                         <a
-                            class="special-link"
+                            class="colored-background-link"
                             href="index.html#interes-turistic"
                             >Interès turístic</a
                         >
                     </li>
                     <li>
-                        <a class="special-link" href="index.html#itinerari-15"
+                        <a
+                            class="colored-background-link"
+                            href="index.html#itinerari-15"
                             >Itinerari per les graderes</a
                         >
                     </li>
@@ -73,9 +75,9 @@
             </nav>
         </header>
         <main class="main">
-            <article class="intro">
-                <header>
-                    <h2>
+            <article>
+                <header class="secondary-header">
+                    <h2 class="secondary-header__title">
                         <span class="fa-solid fa-landmark"></span>
                         Introducció
                     </h2>
@@ -88,14 +90,16 @@
                         Volcànica de la Garrotxa.
                     </p>
                 </section>
-                <figure class="img-croscat">
+                <figure class="img-figures">
                     <img
                         src="https://es.turismegarrotxa.com/img-apartat-3200-1800/croscat-1_001.jpg"
                         alt="Volcà Croscat"
+                        class="img-figures__image"
                     />
-                    <figcaption>
+                    <figcaption class="img-figures__captions">
                         Imatge del volcà Croscat des de l'aire | Imatge de:
                         <a
+                            class="text-link"
                             href="https://ca.turismegarrotxa.com/27-indrets-d-interes-de-la-garrotxa/reserva-natural-del-volca-del-croscat/"
                             title="Reserva Natural del Volcà del Croscat"
                             target="_blank"
@@ -104,9 +108,9 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="history anchor" id="historia-i-formacio">
-                <header>
-                    <h2>
+            <article id="historia-i-formacio">
+                <header class="secondary-header">
+                    <h2 class="secondary-header__title">
                         <span class="fa-solid fa-clock-rotate-left"></span>
                         Història i formació
                     </h2>
@@ -128,6 +132,7 @@
                         La colada de lava té una extensió de 20 km². A sobre de
                         la qual s'hi troba la famosa
                         <a
+                            class="text-link"
                             href="https://ca.wikipedia.org/wiki/Fageda_d'en_Jord%C3%A0"
                             title="La Fageda d'en Jordà (Viqupèdia)"
                             target="_blank"
@@ -136,13 +141,13 @@
                     </p>
                 </section>
             </article>
-            <article class="controversy anchor" id="explotacio-i-creacio-pnzvg">
-                <header>
-                    <h2>
+            <article id="explotacio-i-creacio-pnzvg">
+                <header class="secondary-header">
+                    <h2 class="secondary-header__title">
                         <span class="fa-solid fa-file-shield"></span>
                         Explotació i creació del
                         <abbr
-                            class="pnzvg"
+                            class="text-acronyms"
                             title="Parc Natural de la Zona Volcànica de la Garrotxa"
                             >PNZVG</abbr
                         >
@@ -176,9 +181,9 @@
                     </p>
                 </section>
             </article>
-            <article class="tourism anchor" id="interes-turistic">
-                <header>
-                    <h2>
+            <article id="interes-turistic">
+                <header class="secondary-header">
+                    <h2 class="secondary-header__title">
                         <span class="fa-solid fa-map-location-dot"></span>
                         Interès turístic
                     </h2>
@@ -195,34 +200,42 @@
                         A continuació podem veure informació sobre l'itinerari
                         que recorre per les grederes del volcà.
                     </p>
-                    <div class="itinerari anchor" id="itinerari-15">
+                    <div class="special-section" id="itinerari-15">
                         <h3>
                             <span class="fa-solid fa-route"></span> Itinerari 15
                             - Les grederes del Croscat
                         </h3>
-                        <div class="info-itinerari">
+                        <div class="special-section__summary">
                             <h3>
                                 <span class="fa-solid fa-circle-info"></span>
                                 Informació rellevant
                             </h3>
-                            <ul>
-                                <li>
-                                    <p class="info-title">Tipus</p>
-                                    <p>A peu</p>
+                            <ul class="summary-table list--no-style">
+                                <li class="summary-table__elements">
+                                    <p class="summary-table__text">
+                                        <strong>Tipus</strong>
+                                    </p>
+                                    <p class="summary-table__text">A peu</p>
                                 </li>
-                                <li>
-                                    <p class="info-title">Distància</p>
-                                    <p>3 km</p>
+                                <li class="summary-table__elements">
+                                    <p class="summary-table__text">
+                                        <strong>Distància</strong>
+                                    </p>
+                                    <p class="summary-table__text">3 km</p>
                                 </li>
-                                <li>
-                                    <p class="info-title">Durada</p>
-                                    <p>40 min</p>
+                                <li class="summary-table__elements">
+                                    <p class="summary-table__text">
+                                        <strong>Durada</strong>
+                                    </p>
+                                    <p class="summary-table__text">40 min</p>
                                 </li>
-                                <li>
-                                    <p class="info-title">Punt de sortida</p>
-                                    <p>
+                                <li class="summary-table__elements">
+                                    <p class="summary-table__text">
+                                        <strong>Punt de sortida</strong>
+                                    </p>
+                                    <p class="summary-table__text">
                                         <a
-                                            class="special-link"
+                                            class="colored-background-link"
                                             href="https://goo.gl/maps/FTSLJgMPg4DAJGmM6"
                                             target="_blank"
                                             >Aparcament de l'Àrea de Santa
@@ -233,13 +246,15 @@
                                         ></a>
                                     </p>
                                 </li>
-                                <li>
-                                    <p class="info-title">Dificultat</p>
-                                    <p>Fàcil</p>
+                                <li class="summary-table__elements">
+                                    <p class="summary-table__text">
+                                        <strong>Dificultat</strong>
+                                    </p>
+                                    <p class="summary-table__text">Fàcil</p>
                                 </li>
                             </ul>
                         </div>
-                        <div class="resum-itinerari">
+                        <div class="special-section__full-info">
                             <p>
                                 L'itinerari 15 comença a l'aparcament de l'Àrea
                                 de Santa Margarida. Travessem la carretera pel
@@ -269,6 +284,7 @@
                             <p>
                                 Consulta tota la informació d'aquesta ruta a la
                                 <a
+                                    class="text-link"
                                     href="http://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/garrotxa/gaudeix-del-parc/equipaments-i-itineraris/itineraris/num15/"
                                     target="_blank"
                                     >pàgina dels parcs naturals de la

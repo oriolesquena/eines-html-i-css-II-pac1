@@ -1,101 +1,57 @@
-* {
-  box-sizing: border-box;
-}
+@import "base";
 
-html {
-  scroll-padding-top: 225px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $secondary-color-light;
-  color: $primary-color;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  color: $secondary-color-light;
-  background-color: $secondary-color;
-  border-bottom: 2px solid $secondary-color-light;
-  box-shadow: 0 2px 2px 1px $secondary-color-light;
-  width: 100vw;
-}
-
-.index {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style-type: none;
-  padding-left: 0;
-  width: $global-width * 1.25;
-  margin: 16px auto;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 850px;
-}
-
-.img-croscat {
+.img-figures {
   margin: 0;
   margin-bottom: 0.8rem;
-  font-size: 0.8rem;
-  font-style: italic;
 }
 
-img {
+.img-figures__image {
   max-width: 100%;
 }
 
-a {
-  color: $link-color;
-  text-decoration: none;
-  
-  &:visited{
-    color: $visited-color;
-  }
-
-  &:active, &:hover{
-    color: $hover-color;
-  }
+.img-figures__captions {
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.2;
 }
 
-.special-link {
-  color: $special-link-color;
-  text-decoration: none;
-  
-  &:visited{
-    color: $special-visited-color;
-  }
-
-  &:active, &:hover{
-    color: $special-hover-color;
-  }
+.list--no-style {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.pnzvg {
+.text-acronyms {
   text-decoration: none;
   cursor: help;
 }
 
+.text-link {
+  color: $link-color;
+  text-decoration: none;
+  
+  &:visited {
+    color: $visited-color;
+  }
 
-.info-itinerari {
+  &:active, &:hover {
+    color: $hover-color;
+  }
+}
+
+.colored-background-link {
+  color: $special-link-color;
+  text-decoration: none;
+  
+  &:visited {
+    color: $special-visited-color;
+  }
+
+  &:active, &:hover {
+    color: $special-hover-color;
+  }
+}
+
+.special-section__summary {
   padding: 0.8rem;
   padding-left: 1.8rem;
   padding-right: 1.8rem;
@@ -106,125 +62,41 @@ a {
   border-radius: 5px;
   outline: 3px dotted $secondary-color-light;
   outline-offset: -10px;
+}
 
-  ul {
-    list-style-type: none;
-    padding-left: 0;
+.summary-table__elements {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid $secondary-color-light;
+
+  &:last-of-type {
+    border-bottom: 0;
   }
 
-  li {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    border-bottom: 1px solid $secondary-color-light;
-
-    &:last-of-type {
-      border-bottom: 0;
-    }
-  }
-
-  p {
+  > .summary-table__text {
     margin: 5px auto;
   }
-
-  .info-title {
-    font-weight: bold;
-  }
 }
 
-
-figcaption,
-footer {
-  line-height: 1.2;
-}
-
-.footer {
-  margin-top: 2rem;
-  font-size: 0.75rem;
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: $secondary-color-light;
-  background-color: $secondary-color;
-  width: 100vw;
-
-  .font {
-    margin: 0 auto;
-    width: $global-width * 1.4;
-  }
-}
-
-@media screen and (max-width: $small-width-smartphones) {
-  .header__title {
-    font-size: 1.5rem;
-  }
-
-}
 
 @media screen and (min-width: $tablet-min-width) {
-  html {
-    scroll-padding-top: 170px;
-  }
-
-  body {
+  .img-figures__image {
     width: $global-width;
-    text-align: left;
   }
 
-  .index {
-    flex-flow: row wrap;
-    width: $global-width;
-
-    li:not(:last-child):after { /* afegim un punt entre els elements de la llista de l'índex de navegació */
-      content: " ·\00a0";
-      color: $secondary-color-light;
-      height: 40px;
-      margin: auto;
-    }
-  }
-
-  img {
-    max-width: $global-width;
-  }
-
-  .info-itinerari {
+  .special-section__summary {
     float: left;
     position: relative;
     top: 5px;
-    z-index: -5;
     min-width: 200px;
     max-width: 300px;
     width: calc(80% - 200px);
   }
-
-  .footer {
-    .font {
-      width: calc($global-width * 1.25 - 10%);
-    }
-  }
 }
 
 @media screen and (min-width: $pc-min-width) {
-  html {
-    scroll-padding-top: 150px;
-  }
-
-  body {
-    width: $global-width * 0.8;
-    text-align: left;
-  }
-
-  img {
+  .img-figures__image {
     width: $global-width * 0.8;
     max-width: $max-width;
-  }
-
-  .info-itinerari {
-    float: left;
-  }
-
-  .footer {
-    .font {
-      max-width: $max-width;
-    }
   }
 }
