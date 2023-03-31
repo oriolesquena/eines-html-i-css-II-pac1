@@ -30,7 +30,8 @@ body {
   text-align: center;
   color: $secondary-color-light;
   background-color: $secondary-color;
-  border-bottom: 1rem solid $secondary-color-light;
+  border-bottom: 2px solid $secondary-color-light;
+  box-shadow: 0 2px 2px 1px $secondary-color-light;
   width: 100vw;
 }
 
