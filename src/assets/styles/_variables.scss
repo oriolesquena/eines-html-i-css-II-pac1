@@ -1,6 +1,6 @@
 @use "sass:color";
 
-$font-family-sans-serif: 'Work Sans', sans-serif;
+$font-family-sans-serif: "Work Sans", sans-serif;
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 //main color variables
@@ -15,7 +15,7 @@ $visited-color: color.scale($link-color, $lightness: -10%);
 
 //colored background link color variables
 $colored-bg-link-color: $secondary-color-light;
-$colored-bg-hover-color: darken($colored-bg-link-color, 20%);
+$colored-bg-hover-color: color.scale($colored-bg-link-color, $lightness: -20%);
 $colored-bg-visited-color: $secondary-color-light;
 
 //different devices screen width
