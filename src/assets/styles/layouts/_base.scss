@@ -69,6 +69,36 @@ body {
   margin: 0 auto;
 }
 
+@mixin links ($link, $visited, $hover, $active) {
+
+  & {
+    color: $link;
+    text-decoration: none;
+
+    &:visited {
+      color: $visited;
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active, &:focus {
+      color: $active;
+    }
+  }
+}
+
+.text-link {
+  @include links($link-color, $visited-color, $hover-color, $hover-color);
+}
+
+.colored-background-link {
+  @include links($colored-bg-link-color, $colored-bg-visited-color,
+    $colored-bg-hover-color, $colored-bg-hover-color);
+}
+
+
 @media screen and (max-width: $small-width-smartphones) {
 
   .primary-header__title {
