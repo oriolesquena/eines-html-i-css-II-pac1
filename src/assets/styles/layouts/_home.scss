@@ -15,6 +15,7 @@
   line-height: 1.2;
 }
 
+// definim l'estil de totes les llistes que hi ha a la pàgina
 .list--no-style {
   padding-left: 0;
   list-style-type: none;
@@ -25,6 +26,7 @@
   cursor: help;
 }
 
+// definició de l'estil de la taula resum de l'itinerari
 .special-section__summary {
   line-height: 1;
   color: $secondary-color-light;
@@ -39,6 +41,8 @@
 }
 
 .summary-table__elements {
+
+  //afegim una línia que separi els elements de la llista/taula
   border-bottom: 1px solid $secondary-color-light;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -59,6 +63,8 @@
     width: $global-width;
   }
 
+  // pels dispositius més grans es vol que la taula quedi al costat esquerre
+  // del text per això es defineix amb una posició relativa i un float left
   .special-section__summary {
     position: relative;
     top: 5px;
